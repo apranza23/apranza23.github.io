@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Personal Portfolio Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science Student</p>
+            <h1>Hi, my name is <span>Andres</span><br>from California</h1>
+        </div>
+    </div>
+</div>
+<!------------------------about-------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a Computer Science student from the University of La Verne graduating in Spring 2025.
+                I am focusing on Software Engineering and looking towards Cybersecurity. I have a proneness 
+                to pick up new ideas and techniques quickly and believe I can fit in well with any team 
+                with excellent communication and new ideas based on what I have learned with the 
+                flexibility to work wherever I am needed.       
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br>Designing Backend projects</li>
+                        <li><span>Java</span><br>Learning by creating projects</li>
+                        <li><span>HTML/CSS</span><br>Website Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Summer 2023</span><br>Internship at Lavner Education</li>
+                        <li><span>Sep 2023 - Present</span><br>OIT Service Desk</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - 2025</span><br>Bachelor in Computer Science, University of La Verne </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------Portfolio------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 lass="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Learning Chatbot AI</h3>
+                    <p>This application is a simpler form of ChatGPT.
+                    Source Code is on Github</p>
+                    <a href="https://github.com/apranza23/Learning-Chatbot">Click Here</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Sudoku Solver</h3>
+                    <p>Solve a predetermined Sudoku Board using backtracking.
+                    Source Code is on Github</p>
+                    <a href="https://github.com/apranza23/SudokuSolver">Click Here</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>DJ Andre</h3>
+                    <p>Discord bot made to play music in a personal server.
+                    Source Code is on Github</p>
+                    <a href="https://github.com/apranza23/botify-DJ-Andre">Click Here</a>
+                </div>           
+            </div>
+        </div>
+        <a href="https://github.com/apranza23" class="btn">See more</a>
+    </div>
+</div>
+
+<script>
+
+var tablinks=document.getElementsByClassName("tab-links");
+var tabcontents=document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+</body>
+</html>
